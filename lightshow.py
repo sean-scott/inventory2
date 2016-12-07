@@ -13,31 +13,31 @@ LED_INVERT      = False         # No inverters here...
 
 # Clear
 # Turns off all LEDs
-def display_clear():
+def clear():
         for i in range(strip.numPixels()):
                 strip.setPixelColor(i, Color(0,0,0))
         strip.show()
 
 # Add
 # Top half lit green
-def display_add():
+def add():
         for i in range(strip.numPixels()/2):
                 strip.setPixelColor(i, Color(255,0,0))
         strip.show()
 
 # Remove
 # Bottom half lit red
-def display_remove():
+def remove():
         for i in range(strip.numPixels()/2, strip.numPixels()):
                 strip.setPixelColor(i, Color(0,255,0))
         strip.show()
 
 # Search
 # A chasing white wheel
-def display_search(wait_ms=50):
+def search(wait_ms=50):
 	lit_leds = [0, 1, 2]
 	for i in range(strip.numPixels()):
-		display_clear()
+		clear()
 		for j in range(len(lit_leds)):
 			lit_leds[j] += 1
 			if (lit_leds[j] == strip.numPixels()):
@@ -48,7 +48,7 @@ def display_search(wait_ms=50):
 
 # Success - Add
 # Three green blinks
-def display_success_add(wait_ms=250):
+def success_add(wait_ms=250):
 	for i in range(3):
 
 		for j in range(strip.numPixels()):
@@ -56,12 +56,12 @@ def display_success_add(wait_ms=250):
 		strip.show()
 		time.sleep(wait_ms/1000.0)
 
-		display_clear()
+		clear()
 		time.sleep(wait_ms/1000.0)
 
 # Success - Remove
 # Three red blinks
-def display_success_remove(wait_ms=250):
+def success_remove(wait_ms=250):
         for i in range(3):
 
                 for j in range(strip.numPixels()):
@@ -69,12 +69,12 @@ def display_success_remove(wait_ms=250):
                 strip.show()
                 time.sleep(wait_ms/1000.0)
 
-                display_clear()
+                clear()
                 time.sleep(wait_ms/1000.0)
 
 # Failure
 # Three yellow blinks
-def display_failure(wait_ms=250):
+def failure(wait_ms=250):
         for i in range(3):
 
                 for j in range(strip.numPixels()):
@@ -82,7 +82,7 @@ def display_failure(wait_ms=250):
                 strip.show()
                 time.sleep(wait_ms/1000.0)
 
-		display_clear()
+		clear()
                 time.sleep(wait_ms/1000.0)
 
 # Initialization

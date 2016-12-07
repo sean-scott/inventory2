@@ -15,7 +15,7 @@ class Operation(object):
 #def search(barcode):
 	# do something with the barcode
 	# while searching, do this...
-	#display_search()
+	#search()
 	# if-else for displaying success/fail LEDs
 
 
@@ -33,15 +33,15 @@ def scan():
 def on_press(channel):
 	if operation.waiting:
 		operation.waiting = False
-		#display_clear()
+		#clear()
 	else:
 		operation.waiting = True
 		if channel == ADD_PIN:
 			print "add"
-			#display_add()	
+			#add()	
 		elif channel == REMOVE_PIN:
 			print "remove"
-			#display_remove()
+			#remove()
 		scan()
 
 # GPIO setup
@@ -59,25 +59,25 @@ if __name__ == '__main__':
 	try:
 		while True:
 			#Demo mode
-			lightshow.display_add()
+			lightshow.add()
 			time.sleep(1)
-			lightshow.display_clear()
-			lightshow.display_remove()
+			lightshow.clear()
+			lightshow.remove()
 			time.sleep(1)
-			lightshow.display_clear()
-			lightshow.display_search()
-			lightshow.display_search()
-			lightshow.display_search()			
-			lightshow.display_clear()
+			lightshow.clear()
+			lightshow.search()
+			lightshow.search()
+			lightshow.search()			
+			lightshow.clear()
 			time.sleep(1)
-			lightshow.display_success_add()
-			lightshow.display_clear()
+			lightshow.success_add()
+			lightshow.clear()
 			time.sleep(1)
-			lightshow.display_success_remove()
-			lightshow.display_clear()
+			lightshow.success_remove()
+			lightshow.clear()
 			time.sleep(1)
-			lightshow.display_failure()
-			lightshow.display_clear()
+			lightshow.failure()
+			lightshow.clear()
 			time.sleep(3)
 
 			#pass
