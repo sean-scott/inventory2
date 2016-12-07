@@ -12,11 +12,12 @@ class Operation(object):
 	def __init__(self):
 		self.waiting = False;
 
-def search(barcode):
+#def search(barcode):
 	# do something with the barcode
 	# while searching, do this...
 	#display_search()
 	# if-else for displaying success/fail LEDs
+
 
 def scan():
 	cam = Camera()
