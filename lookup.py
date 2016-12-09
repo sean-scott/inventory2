@@ -1,4 +1,9 @@
-import config # local file for storing the ACCESS_TOKEN
+# UPC lookup functionality via searchupc.com
+
+# Create your own config.py with an ACCESS_TOKEN variable
+# that represents your API access token
+
+import config
 import json
 import requests
 

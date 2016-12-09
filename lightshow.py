@@ -1,3 +1,9 @@
+# Lighting animations for use with a NeoPixel Ring 24
+# https://www.adafruit.com/product/1586
+
+# Represents the various states of the application
+# (adding, removing, searching, success/failures)
+
 import time
 from neopixel import *
 
@@ -8,8 +14,6 @@ LED_FREQ_HZ     = 800000        # Frequency in Hertz (usually 800kHz)
 LED_DMA         = 5             # DMA channel for signal (usually 5)
 LED_BRIGHTNESS  = 10            # 0-255 dark to brightest (blinding)
 LED_INVERT      = False         # No inverters here...
-
-# Animations
 
 # Clear
 # Turns off all LEDs
