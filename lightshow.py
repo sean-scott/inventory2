@@ -43,8 +43,8 @@ def search(wait_ms=50):
 			if (lit_leds[j] == strip.numPixels()):
 				lit_leds[j] = 0
 			strip.setPixelColor(lit_leds[j], Color(255,255,255))
-                strip.show()
-                time.sleep(wait_ms/1000.0)		
+		strip.show()
+		time.sleep(wait_ms/1000.0)
 
 # Success - Add
 # Three green blinks
@@ -75,15 +75,15 @@ def success_remove(wait_ms=250):
 # Failure
 # Three yellow blinks
 def failure(wait_ms=250):
-        for i in range(3):
+	for i in range(3):
 
-                for j in range(strip.numPixels()):
-                        strip.setPixelColor(j, Color(255,255,0))
-                strip.show()
-                time.sleep(wait_ms/1000.0)
+		for j in range(strip.numPixels()):
+			strip.setPixelColor(j, Color(255,255,0))
+		strip.show()
+		time.sleep(wait_ms/1000.0)
 
 		clear()
-                time.sleep(wait_ms/1000.0)
+		time.sleep(wait_ms/1000.0)
 
 # Initialization
 strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
